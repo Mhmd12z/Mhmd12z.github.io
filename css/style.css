@@ -950,6 +950,7 @@ body {
   .footer .container {
     display: flex;
     flex-direction: column;
+    padding: 20px;
   }
   .footer .card {
     margin: 10px 10px 10px 0;
