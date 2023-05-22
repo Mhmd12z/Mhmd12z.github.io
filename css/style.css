@@ -120,27 +120,27 @@ body {
 }
 @keyframes vibration-logo {
   0% {
-    transform: translate(0) ;
+    transform: translate(0);
   }
   20% {
-    transform: translate(-1px, 1px) ;
+    transform: translate(-1px, 1px);
   }
   40% {
-    transform: translate(-1px, -1px) ;
+    transform: translate(-1px, -1px);
   }
   60% {
-    transform: translate(1px, 1px) ;
+    transform: translate(1px, 1px);
   }
   80% {
-    transform: translate(1px, -1px) ;
+    transform: translate(1px, -1px);
   }
   100% {
     transform: translate(0);
   }
 }
-.header .logo:hover img{
+.header .logo:hover img {
   cursor: pointer;
-  animation: vibration-logo .3s infinite;
+  animation: vibration-logo 0.3s infinite;
 }
 /* Media Query For Home  */
 @media (max-width: 767px) {
@@ -154,14 +154,14 @@ body {
   .header .links {
     margin: 0 auto 30px;
   }
+  .home .container {
+    flex-direction: column-reverse;
+  }
   .home .section1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-  .home .section2 {
-    display: none;
   }
 }
 /* End Media Query For Home  */
@@ -186,7 +186,7 @@ body {
   text-decoration: none;
   color: var(--main-color);
   height: 72px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .header li a:hover {
@@ -408,7 +408,7 @@ body {
     border-radius: 5px;
     width: 100px;
     height: 20px;
-    top: 70%;
+    top: 85%;
     z-index: 0;
   }
 }
@@ -682,7 +682,7 @@ body {
   justify-content: space-between;
   transition: all 0.5s;
 }
-.bundle .card:double-button{
+.bundle .card:double-button {
   background-color: var(--main-color-pros);
   color: var(--main-color-alt);
 }
@@ -691,7 +691,7 @@ body {
   cursor: pointer;
   transform: scale(1.05);
 }
-.bundle .card:hover div{
+.bundle .card:hover div {
   color: var(--main-color-alt);
 }
 .bundle .card:active {
@@ -800,7 +800,7 @@ body {
   color: #eb804b;
   cursor: pointer;
 }
-.donate-form .card-1 h1{
+.donate-form .card-1 h1 {
   width: fit-content;
   border-bottom: 2px solid var(--main-color-pros);
   border-radius: 5px;
@@ -821,7 +821,7 @@ body {
 }
 .timer-container {
   text-align: center;
-  background-color:#f1f1f1;
+  background-color: #f1f1f1;
   padding: 10px;
   border-radius: 5px;
   color: #333;
@@ -858,7 +858,8 @@ body {
   transition: all 0.3s ease-in-out;
   overflow: hidden;
   cursor: pointer;
-  grid-column: span 2;color: var(--main-color);
+  grid-column: span 2;
+  color: var(--main-color);
   font-weight: 600;
 }
 
@@ -963,10 +964,10 @@ body {
   flex-direction: column;
   gap: 10px;
 }
-.footer .links a{
-  transition: all .3s;
+.footer .links a {
+  transition: all 0.3s;
 }
-.footer .links a:hover{
+.footer .links a:hover {
   color: white;
 }
 .footer .links a {
