@@ -30,6 +30,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="#aboutUs">AboutUs</a></li>
           <li><a href="#footer">Contact</a></li>
+          <!-- Scroll To Top Button  -->
           <button id="scrollToTopBtn" onclick="scrollToTop()">
             <i class="fa-solid fa-syringe"></i>
           </button>
@@ -103,7 +104,9 @@
             you’re in the right place.
           </h6>
           <div class="play-video">
-            <a href="video.html" target="_blank"><i class="fa-solid fa-play"></i> Video Play</a>
+            <a href="video.html" target="_blank"
+              ><i class="fa-solid fa-play"></i> Video Play</a
+            >
           </div>
         </div>
         <div class="section2">
@@ -277,17 +280,21 @@
           <form action="">
             <div class="name">
               <label for="">Name</label>
-              <input type="text" required />
+              <input type="text" />
             </div>
             <div class="phone">
               <label for="">Phone Number</label>
-              <input type="tel" required />
+              <input type="tel" />
             </div>
             <div class="email">
               <label for="">Email Address</label>
-              <input type="email" required />
+              <input type="email"/>
             </div>
-            <div class="payment-method">
+            <div class="password">
+              <label for="">Password</label>
+              <input type="password"/>
+            </div>
+            <!-- <div class="payment-method">
               <label for="">Payment Method</label>
               <input type="text" required />
             </div>
@@ -305,8 +312,8 @@
               <option value="">Beirut</option>
               <option value="">Baalbek</option>
               <option value="">Halba</option>
-            </select>
-            <button id="confirm-donation" type="confirm">Confirm</button>
+            </select> -->
+            <button name="continue" id="confirm-donation" onclick="submitt2()">CONTINUE</button>
           </form>
         </div>
         <div class="timer-container">
@@ -355,6 +362,7 @@
               name="Email"
               placeholder="Cancer@care.io"
               autocomplete="off"
+              value="Cancer@care.io"
             />
             <input class="button--submit" value="Subscribe" type="submit" />
           </div>
