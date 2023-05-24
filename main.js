@@ -82,3 +82,41 @@ window.onload = function () {
   var display = document.getElementById("timer");
   startTimer(duration, display);
 };
+
+function submitt(){
+  let inputs = document.getElementsByTagName("input");
+  let button = document.getElementById("btn-submit");
+  for(let i=0;i<inputs.length;i++){
+    if(inputs[i].value===""){
+      alert("Please Fill All The Fields");
+      event.preventDefault();
+      return;
+    }
+  }
+  displayMessage();
+}
+  function submitt2(){
+    let inputs = document.getElementsByTagName("input");
+    let button = document.getElementById("confirm-donation");
+    for(let i=0;i<inputs.length;i++){
+      if(inputs[i].value===""){
+        alert("Please Fill All The Fields");
+        event.preventDefault();
+        return;
+      }
+    }
+    goToAnotherPage();
+}
+function goToAnotherPage(){
+  window.location.href = "/payments.html";
+}
+function displayMessage(){
+  let message=document.querySelector(".finish .container");
+  let paymentPage=document.getElementById("payments");
+  let visa= document.getElementsByClassName("visa")[0];
+  message.style.zIndex=99;
+  message.style.display="flex";
+  paymentPage.style.opacity=0;
+  visa.style.opacity=0;
+  event.preventDefault();
+}
