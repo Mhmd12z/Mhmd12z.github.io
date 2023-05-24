@@ -98,9 +98,10 @@ function submitt(){
   function submitt2(){
     let inputs = document.getElementsByTagName("input");
     let button = document.getElementById("confirm-donation");
+    let email=document.getElementById("email");
     for(let i=0;i<inputs.length;i++){
       if(inputs[i].value===""){
-        alert("Please Fill All The Fields");
+        alert("Please Fill All The Fields || put correct email");
         event.preventDefault();
         return;
       }
