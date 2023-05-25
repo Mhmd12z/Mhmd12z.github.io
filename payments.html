@@ -92,62 +92,6 @@
         </ul>
       </div>
     </div>
-    <!-- <div class="payments">
-        <div class="container">
-          <div class="visa"></div>
-          <div class="payment-form">
-          <div class="card-number">
-            <label for="">CARD NUMBER</label>
-            <input type="number" />
-          </div>
-          <div class="card-holder">
-            <label for="">CARD HOLDER</label>
-            <input type="text" />
-          </div>
-          <div class="dates">
-            <div class="card exp-mm">
-              <label for="">EXPIRATION MM</label>
-              <select name="" id="">
-                <option value="">01</option>
-                <option value="">02</option>
-                <option value="">03</option>
-                <option value="">04</option>
-                <option value="">05</option>
-                <option value="">06</option>
-                <option value="">07</option>
-                <option value="">08</option>
-                <option value="">09</option>
-                <option value="">10</option>
-                <option value="">11</option>
-                <option value="">12</option>
-              </select>
-            </div>
-            <div class="card exp-yy">
-              <label for="">EXPIRATION YY</label>
-              <select name="" id="">
-                <option value="">2023</option>
-                <option value="">2022</option>
-                <option value="">2021</option>
-                <option value="">2020</option>
-                <option value="">2019</option>
-                <option value="">2018</option>
-                <option value="">2017</option>
-                <option value="">2016</option>
-                <option value="">2015</option>
-                <option value="">2014</option>
-                <option value="">2013</option>
-                <option value="">2012</option>
-              </select>
-            </div>
-            <div class="card cvv">
-              <label for="">CVV</label>
-              <input type="number" />
-            </div>
-          </div>
-          </div>
-          <button>SUBMIT</button>
-        </div>
-      </div> -->
     <div class="payments">
       <div class="visa">
         <div class="container">
@@ -155,15 +99,15 @@
             <img src="/images/visa-5-logo-black-and-white.png" alt="" />
             <img src="/images/visa-5-logo-png-transparent.png" alt="" />
           </div>
-          <div class="number">3244324424324343</div>
+          <div class="number" id="card-number">XXXX-XXXX-XXXX</div>
           <div class="info">
             <div class="section section-1">
               <div class="title">CARD HOLDER</div>
-              <div class="value">EXPRIES</div>
+              <div class="value">CVV</div>
             </div>
             <div class="section section-2">
-              <div class="title">FF JSUKT JSDKELFS</div>
-              <div class="value">08 2025</div>
+              <div class="title" id="card-holder">XX XXXX XXXXXXXX</div>
+              <div class="value" id="cvv">XXX</div>
             </div>
           </div>
         </div>
@@ -171,13 +115,13 @@
       <div class="container" id="payments">
         <form action="">
           <label for="">CARD NUMBER</label>
-          <input type="text" />
+          <input type="text" name="input-number" oninput="changeNumber()" />
           <label for="">CARD HOLDER</label>
-          <input type="text" />
+          <input type="text" name="input-holder" oninput="changeHolder()" />
           <div class="dates">
             <div class="mm">
               <label for="">EXPIRATION MM</label>
-              <select name="" id="">
+              <select name="" id="" name="input-month" onchange="changeMonth()">
                 <option value="">01</option>
                 <option value="">02</option>
                 <option value="">03</option>
@@ -194,7 +138,7 @@
             </div>
             <div class="yy">
               <label for="">EXPIRATION YY</label>
-              <select name="" id="">
+              <select name="" id="" name="input-year" onchange="changeYear()">
                 <option value="">2023</option>
                 <option value="">2022</option>
                 <option value="">2021</option>
@@ -211,10 +155,10 @@
             </div>
             <div class="cvv">
               <label for="">CVV</label>
-              <input type="number" />
+              <input type="number" name="input-cvv" oninput="changeCVV()" />
             </div>
           </div>
-          <button onclick="submitt()" id="btn-submit" name="submit">
+          <button onclick="submitBtn()" id="btn-submit" name="submit">
             SUBMIT
           </button>
         </form>
